@@ -92,6 +92,10 @@
     git push --set-upstream origin <New-Branch>
     ```
 
+- #### `Undo merge before commit & push`
+    ```bash
+    git merge --abort
+    ```
 
 ## Branch
 - #### `Check all branch List`
