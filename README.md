@@ -62,7 +62,11 @@
     git merge <branch-name>
     ```
     <i>This command merges the specified branch’s history into the current branch.</i>
-
+    
+- #### `Undo merge before commit & push`
+    ```bash
+    git merge --abort
+    ```
  
 - #### `Steps to remove directory from Repository`
     ```bash
@@ -92,9 +96,14 @@
     git push --set-upstream origin <New-Branch>
     ```
 
-- #### `Undo merge before commit & push`
+- #### `To Check Remote Origin`
     ```bash
-    git merge --abort
+    git remote -v 
+    ```
+
+- #### `To change remote origin`
+    ```bash
+    git remote set-url origin https://github.com/......
     ```
 
 ## Branch
