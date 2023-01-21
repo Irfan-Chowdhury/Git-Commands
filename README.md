@@ -105,8 +105,16 @@
     ```bash
     git remote set-url origin https://github.com/......
     ```
+	
+- #### `If gitignore not working, then run this command`
+    ```bash
+    git rm -r --cached directory/sub-directory
+    ```
+    then use `git add .` , `git commit -m message` & `git push` 
+	   
 
 ## Branch
+
 - #### `Check all branch List`
     ```bash
     git branch
@@ -136,3 +144,32 @@
     ```bash
     git push origin --delete <Branch-Name>
     ```
+
+## Publish your private assignments in your github public repository
+
+- #### `Check Current URL`
+    ```bash
+    git remote -v
+    ```
+
+<i>Then create a new repository. After get new repository link update something in your locale machine which is in private mode. Copy the new url and jus change <b>set-url</b> instead of <b>add</b></i> 
+
+```bash
+git remote set-url origin https://github.com/Irfan-Chowdhury/your_new_repository.git
+```
+
+```bash
+git push
+```
+
+## Undo last commit from local and remote 
+
+- #### `Locally`
+```bash
+git reset --soft HEAD~1
+```
+
+- #### `Remotely`
+```bash
+git push origin +HEAD
+```
