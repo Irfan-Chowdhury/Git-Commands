@@ -173,3 +173,10 @@ git reset --soft HEAD~1
 ```bash
 git push origin +HEAD
 ```
+
+## Tag
+- #### `For Releasing New Version`
+```bash
+git tag -a v0.1.2 -m "Release v0.1.2"
+git push --follow-tags
+```
