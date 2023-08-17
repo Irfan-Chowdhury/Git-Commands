@@ -123,6 +123,10 @@
     ```bash
     git branch <Your-Branch-Name>
     ```
+- #### `Push the new branch in github`
+    ```bash
+    git push --set-upstream origin <Your-New-Branch-Name>
+    ```
 - #### `Switch Branch`
     ```bash
     git checkout <Branch-Name>
