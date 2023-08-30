@@ -184,3 +184,22 @@ git push origin +HEAD
 git tag -a v0.1.2 -m "Release v0.1.2"
 git push --follow-tags
 ```
+
+## Control your specific files/directory to visible/hide in GitHub
+- #### `For remove/hide`
+```bash
+git rm -r --cached app/Http/Controllers
+```
+
+- #### `For add/visible`
+```bash
+git add -f app/Http/Controllers/Landlord
+```
+
+- #### `After doing these, please run these commands given below` 
+```bash
+git commit -m "Control my controller files"
+git push origin main
+```
+
+
