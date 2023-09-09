@@ -148,6 +148,29 @@
     ```bash
     git push origin --delete <Branch-Name>
     ```
+    
+### Merging via command line:
+If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.
+- Step 1: Clone the repository or update your local repository with the latest changes.
+```bash
+git pull origin develop
+```
+
+- Step 2: Switch to the base branch of the pull request.
+```bash
+git checkout develop
+```
+
+- Step 3: Merge the head branch into the base branch.
+```bash
+git merge tenant-authorization
+```
+
+- Step 4: Push the changes.
+```bash
+git push -u origin develop
+```
+
 
 ## Publish your private assignments in your github public repository
 
