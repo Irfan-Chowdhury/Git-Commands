@@ -218,11 +218,20 @@ git rm -r --cached app/Http/Controllers
 ```bash
 git add -f app/Http/Controllers/Landlord
 ```
-
 - #### `After doing these, please run these commands given below` 
 ```bash
 git commit -m "Control my controller files"
 git push origin main
 ```
 
-
+## Pushing Issues
+If you face authenticate issue during try to push from terminal, first check which remote url exists in your repository. 
+- check remote url
+```bash
+git remote -v
+```
+- if url start with `https://github.com/` then replace with `git@github.com`. For example, suppose your url is `https://github.com/Irfan-Chowdhury/Git-Commands.git`. Now set with `git@github.com:Irfan-Chowdhury/Git-Commands.git`.
+```bash
+git remote set-url origin git@github.com:Irfan-Chowdhury/Git-Commands.git
+```
+Now you can push easily from your terminal.
