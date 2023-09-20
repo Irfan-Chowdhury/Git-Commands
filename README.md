@@ -3,6 +3,8 @@
 # Git-Commands
 </div>
 
+## A. General
+
 - #### `Create Git`
     ```bash
     git init
@@ -112,8 +114,9 @@
     ```
     then use `git add .` , `git commit -m message` & `git push` 
 	   
+<br>
 
-## Branch
+## B. Branch
 
 - #### `Check all branch List`
     ```bash
@@ -149,7 +152,7 @@
     git push origin --delete <Branch-Name>
     ```
     
-### Merging via command line:
+### Merging branch via command line:
 If you do not want to use the merge button or an automatic merge cannot be performed, you can perform a manual merge on the command line. However, the following steps are not applicable if the base branch is protected.
 - Step 1: Clone the repository or update your local repository with the latest changes.
 ```bash
@@ -171,8 +174,33 @@ git merge tenant-authorization
 git push -u origin develop
 ```
 
+### Fetch new branch from remote to local machine:
+If a team member has created a new branch on the GitHub server and you want to fetch and work with that branch locally, you can follow these steps:
 
-## Publish your private assignments in your github public repository
+- Step 1: Fetch Branches from the Remote
+```bash
+git fetch origin
+```
+
+- Step 2: List Remote Branches
+```bash
+git branch -r
+```
+
+- Step 3: Check Out the New Branch
+```bash
+git checkout -b new-branch-name origin/new-branch-name
+```
+This command will create a new local branch named branch-name that tracks the remote branch of the same name. It also checks out the new branch so you can start working on it.
+
+
+- Step 4: Push Changes to the Remote (Optional)
+```bash
+git push origin new-branch-name
+```
+<br>
+
+## C. Publish your private assignments in your github public repository
 
 - #### `Check Current URL`
     ```bash
@@ -189,7 +217,9 @@ git remote set-url origin https://github.com/Irfan-Chowdhury/your_new_repository
 git push
 ```
 
-## Undo last commit from local and remote 
+<br>
+
+## D. Undo last commit from local and remote 
 
 - #### `Locally`
 ```bash
@@ -201,14 +231,18 @@ git reset --soft HEAD~1
 git push origin +HEAD
 ```
 
-## Tag
+<br>
+
+## E. Tag
 - #### `For Releasing New Version`
 ```bash
 git tag -a v0.1.2 -m "Release v0.1.2"
 git push --follow-tags
 ```
 
-## Control your specific files/directory to visible/hide in GitHub
+<br>
+
+## F.  Control your specific files/directory to visible/hide in GitHub
 - #### `For remove/hide`
 ```bash
 git rm -r --cached app/Http/Controllers
@@ -223,8 +257,9 @@ git add -f app/Http/Controllers/Landlord
 git commit -m "Control my controller files"
 git push origin main
 ```
+<br>
 
-## Pushing Issues
+## G. Pushing Issues
 If you face authenticate issue during try to push from terminal, first check which remote url exists in your repository. 
 - check remote url
 ```bash
