@@ -307,18 +307,18 @@ Now you can push easily from your terminal.
     git stash apply
     ```
 
-    <b>To apply a specific stash :</b>  যদি খেয়াল করেন তাহলে দেখবেন প্রত্যেকটা আইটেমের আগে এখানে stash@{n}, এখানে n মানে নাম্বার দিয়ে মার্ক করা আছে । আপনি এটা ব্যবহার করেও pop অথবা apply করতে পারবেন । 
+    <b>To apply a specific stash ঃ</b>  যদি খেয়াল করেন তাহলে দেখবেন প্রত্যেকটা আইটেমের আগে এখানে stash@{n}, এখানে n মানে নাম্বার দিয়ে মার্ক করা আছে । আপনি এটা ব্যবহার করেও pop অথবা apply করতে পারবেন । 
     ```bash
     git stash apply stash@{3}
     git stash pop stash@{1}
     ```
 
-    <b>Clear Stash :</b> To clear all stashes, you can use this.
+    <b>Clear Stash :<b> To clear all stashes, you can use this.
     ```bash
     git stash clear
     ```
 
-    <b>Specific Clear Stash :</b> To clear  specific stash, you can use this.
+    <b>Specific Clear Stash :<b> To clear  specific stash, you can use this.
     ```bash
     git stash drop stash@{3}
     ```
@@ -332,13 +332,6 @@ Now you can push easily from your terminal.
     যদি উক্ত কমিটের সবগুলাই যদি চেঞ্জ হয়ে যাক চান তাহলে নিমোক্ত কমান্ড 
     ```bash
     git reset <commit_id> --hard
-    ```
-
-- ### `Git Revert`
-    Reset  - এর মতই তবে পার্থক্য হল - এখানে Revert এর পর আরেকটি কমিট দেয়া লাগে ।
-
-    ```bash
-    git revert <commit_id>
     ```
 
     
