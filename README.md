@@ -307,18 +307,18 @@ Now you can push easily from your terminal.
     git stash apply
     ```
 
-    <b>To apply a specific stash ঃ</b>  যদি খেয়াল করেন তাহলে দেখবেন প্রত্যেকটা আইটেমের আগে এখানে stash@{n}, এখানে n মানে নাম্বার দিয়ে মার্ক করা আছে । আপনি এটা ব্যবহার করেও pop অথবা apply করতে পারবেন । 
+    <b>To apply a specific stash :</b>  যদি খেয়াল করেন তাহলে দেখবেন প্রত্যেকটা আইটেমের আগে এখানে stash@{n}, এখানে n মানে নাম্বার দিয়ে মার্ক করা আছে । আপনি এটা ব্যবহার করেও pop অথবা apply করতে পারবেন । 
     ```bash
     git stash apply stash@{3}
     git stash pop stash@{1}
     ```
 
-    <b>Clear Stash :<b> To clear all stashes, you can use this.
+    <b>Clear Stash :</b> To clear all stashes, you can use this.
     ```bash
     git stash clear
     ```
 
-    <b>Specific Clear Stash :<b> To clear  specific stash, you can use this.
+    <b>Specific Clear Stash :</b> To clear  specific stash, you can use this.
     ```bash
     git stash drop stash@{3}
     ```
@@ -334,4 +334,17 @@ Now you can push easily from your terminal.
     git reset <commit_id> --hard
     ```
 
+- ### `Git Revert`
+    Reset  - এর মতই তবে এখানে Revert করার এর পর আরেকটি কমিট দেয়া লাগে ।
+
+    ```bash
+    git revert <commit_id>
+    ```
+
+    Reset এবং Revert এর মধ্যে মূলত পার্থ্য হল -
+
+    Reset কমান্ডে একটি কমিট পর্যন্ত থাকা চেঞ্জেসগুলা পর্যন্ত ফিরে পাওয়া যায় পরবর্তী সব কমিট বাদ দিয়ে । এক্ষেত্রে নতুন কোন কমিট তৈরি হয়না ।
+
+    Revert এর ক্ষেত্রে একটা কমিটের চেঞ্জেসগুলা সব বাদ দিয়ে নতুন আরেকটা কমিট এর মাধ্যম । সেক্ষেত্রে আপনার প্রজেক্টটি গিটহাবে বা রিমোট কোন রিপোতে থাকলে অন্যান্য কন্ট্রিবিউটাররা রিভার্টের কমিটটা দেখতে পাবে এবং কনফিউজড হবেনা । এছাড়াও আপনি গিট লগ দেখলে দেখবেন যেখানে Reset করা হলে কোন প্রমাণ বা লগ পাবেন না সেখানে Revert করা হলে সেটার জন্য আরেকটা কমিট মানে লগ দেখতে পাবেন । 
+    
     
