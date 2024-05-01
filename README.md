@@ -277,49 +277,51 @@ Now you can push easily from your terminal.
     ```bash
     git restore . 
     ```
-git restore কমান্ডটি মূলত আপনােক কোন ফাইল বা ডিরেক্টরি আগের অবস্থায় (শেষ কমিটের অবস্থায়) ফিরিয়ে আনতে সাহায্য কের। ধরেন আপনার অলরেডি কমিটেড একটা  প্রজেক্টের নতুন একটা ফিচার ডেভ্লপ করার চেষ্টা করেছিলেন কিন্তু কিছু কোড করার ফলে মনে হল পূর্বের অবস্থায় চলে যাওয়া বেটার তখন এই কমান্ডা ব্যবহার করলে লাস্ট Commit অবস্থায় ফিরিয়ে নিয়ে যাবে ।
+    git restore কমান্ডটি মূলত আপনােক কোন ফাইল বা ডিরেক্টরি আগের অবস্থায় (শেষ কমিটের অবস্থায়) ফিরিয়ে আনতে সাহায্য কের। ধরেন আপনার অলরেডি কমিটেড একটা  প্রজেক্টের নতুন একটা ফিচার ডেভ্লপ করার চেষ্টা করেছিলেন কিন্তু কিছু কোড করার ফলে মনে হল পূর্বের অবস্থায় চলে যাওয়া বেটার তখন এই কমান্ডা ব্যবহার করলে লাস্ট Commit অবস্থায় ফিরিয়ে নিয়ে যাবে ।
 
 - ### `Git Stash`
-যদি কোন কাজের মাঝামাঝি থেকে কোন প্রকার কমিট ছাড়া অন্য কোন টাস্ক বা ব্রাঞ্চে যাওয়া লাগে, ঐ কাজ গুলো টেম্পোরারি কোথাও স্টোর করার জন্য নিচের কমান্ডি ব্যবহার করা যেতে পারে ।  
+    যদি কোন কাজের মাঝামাঝি থেকে কোন প্রকার কমিট ছাড়া অন্য কোন টাস্ক বা ব্রাঞ্চে যাওয়া লাগে, ঐ কাজ গুলো টেম্পোরারি কোথাও স্টোর করার জন্য নিচের কমান্ডি ব্যবহার করা যেতে পারে ।  
 
-  ```bash
-  git stash . 
-  ```
-কমান্ডটি দেয়ার সাথে করা কাজগুলো ভ্যানিশ হয়ে যাবে । চিন্তার কোন কারণ নেই । 
+    ```bash
+    git stash . 
+    ```
+    কমান্ডটি দেয়ার সাথে করা কাজগুলো ভ্যানিশ হয়ে যাবে । চিন্তার কোন কারণ নেই । 
 
-স্ট্যাশ কমান্ডটি এভাবে করলে আপনার অলরেডি গিটে ট্র্যাক করা (কমিটেড) ফাইল বা ডিরেক্টরির চেঞ্জসগুলাও স্ট্যাশে রাখবে । যদি শেষ কমিটের পর একেবারে নতুন কোন ফাইল অথবা ডিরেক্টরি এড করে থাকেন তাহলে সেগুলা এভাবে স্ট্যাশে যাবেনা সেক্ষেত্রে আপনাকে ফ্ল্যাগ ব্যবহার করে গিটকে বলে দিতে হবে যে আপনি নতুন ফাইল, ডিরেক্ট্রিগুলাও স্ট্যেষে নিতে চান । 
-```bash
-git stash -u . 
-```
-<br>
-<b>Listing stashes:</b> You can view a list of your stashes using:
-```bash
-git stash list
-```
+    স্ট্যাশ কমান্ডটি এভাবে করলে আপনার অলরেডি গিটে ট্র্যাক করা (কমিটেড) ফাইল বা ডিরেক্টরির চেঞ্জসগুলাও স্ট্যাশে রাখবে । যদি শেষ কমিটের পর একেবারে নতুন কোন ফাইল অথবা ডিরেক্টরি এড করে থাকেন তাহলে সেগুলা এভাবে স্ট্যাশে যাবেনা সেক্ষেত্রে আপনাকে ফ্ল্যাগ ব্যবহার করে গিটকে বলে দিতে হবে যে আপনি নতুন ফাইল, ডিরেক্ট্রিগুলাও স্ট্যেষে নিতে চান । 
+    ```bash
+    git stash -u . 
+    ```
+    <br>
+    <b>Listing stashes:</b> You can view a list of your stashes using:
+    ```bash
+    git stash list
+    ```
 
-<b>Restoring the stash and removing it:</b> for getting latest stash data, you've to command this 
-```bash
-git stash pop
-```
+    <b>Restoring the stash and removing it:</b> for getting latest stash data, you've to command this 
+    ```bash
+    git stash pop
+    ```
 
-<b>Applying a stash: </b>সুবিধা হল আপনি চেঞ্জেস এপ্লাই করার পরও স্ট্যাশ থেকে এগুলার এক্সেস পাবেন । 
-```bash
-git stash apply
-```
+    <b>Applying a stash: </b>সুবিধা হল আপনি চেঞ্জেস এপ্লাই করার পরও স্ট্যাশ থেকে এগুলার এক্সেস পাবেন । 
+    ```bash
+    git stash apply
+    ```
 
- <b>To apply a specific stash ঃ</b>  যদি খেয়াল করেন তাহলে দেখবেন প্রত্যেকটা আইটেমের আগে এখানে stash@{n}, এখানে n মানে নাম্বার দিয়ে মার্ক করা আছে । আপনি এটা ব্যবহার করেও pop অথবা apply করতে পারবেন । 
-```bash
-git stash apply stash@{3}
-git stash pop stash@{1}
-```
+    <b>To apply a specific stash ঃ</b>  যদি খেয়াল করেন তাহলে দেখবেন প্রত্যেকটা আইটেমের আগে এখানে stash@{n}, এখানে n মানে নাম্বার দিয়ে মার্ক করা আছে । আপনি এটা ব্যবহার করেও pop অথবা apply করতে পারবেন । 
+    ```bash
+    git stash apply stash@{3}
+    git stash pop stash@{1}
+    ```
 
-<b>Clear Stash :<b> To clear all stashes, you can use this.
-```bash
-git stash clear
-```
+    <b>Clear Stash :<b> To clear all stashes, you can use this.
+    ```bash
+    git stash clear
+    ```
 
-<b>Specific Clear Stash :<b> To clear  specific stash, you can use this.
-```bash
-git stash drop stash@{3}
-```
+    <b>Specific Clear Stash :<b> To clear  specific stash, you can use this.
+    ```bash
+    git stash drop stash@{3}
+    ```
+
+- ### `Git Reset`
 
