@@ -324,4 +324,14 @@ Now you can push easily from your terminal.
     ```
 
 - ### `Git Reset`
+    ভুলে কোন কমিট করে ফেললে সেটি পূর্বের অবস্থায় ফিরিয়ে আনতে নিমোক্ত কমান্ডটি করতে হবে - 
 
+    ```bash
+    git reset <commit_id>
+    ```
+    যদি উক্ত কমিটের সবগুলাই যদি চেঞ্জ হয়ে যাক চান তাহলে নিমোক্ত কমান্ড 
+    ```bash
+    git reset <commit_id> --hard
+    ```
+
+    
