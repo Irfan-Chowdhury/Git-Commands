@@ -360,3 +360,17 @@ Now you can push easily from your terminal.
     <b>Author :</b> জুনায়েদ আহমেদ  
     <b>Page No:</b> 133
     
+
+- ### `Git Squash`
+
+    If you create another new branch, currently you now in `main` branch and want to merge with the new branch - 
+    ```bash
+    git merge new-feature --squash      
+    ``` 
+    নতুন ব্রাঞ্চে থাকা অবস্থায় যত গুলা কমিট করা হয়েছে সেগুলা চাইল সব এক কমিটেই মেইন ব্রাঞ্চের সাথে এড করে দিতে পারবো । এতে লগ ক্লিন থাকে ।
+    প্রাথমিকভাবে স্টেজড অবস্থায় পাবেন । 
+    উপরক্ত কমান্ডি চালানোর পর আরেকটি কমিট দিতে হবে যাতে সবগুলা চেঞ্জেস যাস্ট একটা কমিটের মাধ্যমে আপনার ব্রাঞ্চে যুক্ত হয়ে যায় - 
+
+    ```bash
+    git commit -m “new feature introduced”      
+    ``` 
