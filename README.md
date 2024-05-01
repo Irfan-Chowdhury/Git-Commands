@@ -270,3 +270,12 @@ git remote -v
 git remote set-url origin git@github.com:Irfan-Chowdhury/Git-Commands.git
 ```
 Now you can push easily from your terminal.
+
+## H. Explore Git
+
+- #### `Git Restore`
+    ```bash
+    git restore . 
+    ```
+    git restore কমান্ডটি মূলত আপনােক কোন ফাইল বা ডিরেক্টরি আগের অবস্থায় (শেষ কমিটের অবস্থায়) ফিরিয়ে আনতে সাহায্য কের। ধরেন আপনার অলরেডি কমিটেড একটা  প্রজেক্টের নতুন একটা ফিচার ডেভ্লপ করার চেষ্টা করেছিলেন কিন্তু কিছু কোড করার ফলে মনে হল পূর্বের অবস্থায় চলে যাওয়া বেটার তখন এই কমান্ডা ব্যবহার করলে লাস্ট Commit অবস্থায় ফিরিয়ে নিয়ে যাবে ।    
+
